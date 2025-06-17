@@ -1,0 +1,58 @@
+<!-- Diagonal Image Timeline Card -->
+<div
+  class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
+  data-clickable="true"
+>
+  <!-- Icon -->
+  <div
+    class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 dark:bg-slate-600 group-[.is-active]:bg-emerald-500 text-slate-500 dark:text-slate-300 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
+  >
+    <svg class="fill-current dark:fill-slate-300" xmlns="http://www.w3.org/2000/svg" width="12" height="10">
+      <path
+        fill-rule="nonzero"
+        d="M10.422 1.257 4.655 7.025 2.553 4.923A.916.916 0 0 0 1.257 6.22l2.75 2.75a.916.916 0 0 0 1.296 0l6.415-6.416a.916.916 0 0 0-1.296-1.296Z"
+      />
+    </svg>
+  </div>
+
+  <!-- Card (Wrapper becomes <a> only when clickable) -->
+  <div class="card-wrapper w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+    <div
+      class="card-content bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow dark:shadow-lg dark:shadow-slate-900/50 overflow-hidden flex h-48 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+    >
+      <!-- Diagonal image container -->
+      <div class="w-1/4 relative overflow-hidden diagonal-cut">
+        <img
+          src="https://i.pravatar.cc/150?img=3"
+          alt="Project"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+        />
+      </div>
+
+      <!-- Content area -->
+      <div class="flex-1 p-4 flex flex-col">
+        <div class="flex justify-between">
+          <div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">Project Title</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Project Subtitle</p>
+          </div>
+          <time class="text-sm font-medium text-indigo-500 dark:text-indigo-400">08/06/2023</time>
+        </div>
+
+        <!-- Description -->
+        <p class="mt-2 text-slate-500 dark:text-slate-400 text-sm flex-grow">
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+          feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+          delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
+        </p>
+
+          <!-- Tags -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded-full">React</span>
+            <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-xs rounded-full">Tailwind</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

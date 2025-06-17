@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- TODO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <!-- <body class="bg-gradient-to-r from-indigo-800 to-blue-900 min-h-screen p-4"> -->
+  <!-- <body class="bg-gray-50"> -->
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div id="icon-container"></div>
+
+    <script>
+      function generateColorIcon({
+        color = "pink",
+        gradientFrom = "pink-100",
+        gradientTo = "fuchsia-100",
+        darkFrom = "pink-900/40",
+        darkTo = "fuchsia-800/50",
+        borderColor = "white/80",
+        darkBorder = "pink-900/60",
+        textColor = "text-pink-500",
+        darkText = "dark:text-pink-300/90",
+      } = {}) {
+        return `
+    <div
+      class="w-10 h-10 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 md:border-[3px] border-${borderColor} dark:border-${darkBorder} bg-gradient-to-br from-${gradientFrom} to-${gradientTo} dark:from-${darkFrom} dark:to-${darkTo}"
+    >
+      <svg
+        class="w-8 h-8 md:w-14 md:h-14 ${textColor} ${darkText}"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        stroke="currentColor"
+        stroke-width="2.5"
+        fill="none"
+      >
+        <g transform="translate(1.41 1.41) scale(2.81)">
+          <path d="M 78.384 53.046 c -0.553 0 -1 -0.447 -1 -1 V 33.13 c 0 -0.552 0.447 -1 1 -1 s 1 0.448 1 1 v 18.916 C 79.384 52.599 78.937 53.046 78.384 53.046 z"/>
+          <path d="M 65.824 63.373 c -0.553 0 -1 -0.447 -1 -1 V 40.197 c 0 -1.122 -6.745 -3.751 -19.824 -3.751 c -13.08 0 -19.825 2.629 -19.825 3.751 v 22.176 c 0 0.553 -0.448 1 -1 1 s -1 -0.447 -1 -1 V 40.197 c 0 -4.549 14.276 -5.751 21.825 -5.751 s 21.824 1.202 21.824 5.751 v 22.176 C 66.824 62.926 66.377 63.373 65.824 63.373 z"/>
+          <path d="M 45 68.124 c -7.549 0 -21.825 -1.202 -21.825 -5.751 S 37.451 56.622 45 56.622 s 21.824 1.202 21.824 5.751 S 52.549 68.124 45 68.124 z M 45 58.622 c -13.08 0 -19.825 2.629 -19.825 3.751 S 31.92 66.124 45 66.124 c 13.079 0 19.824 -2.629 19.824 -3.751 S 58.079 58.622 45 58.622 z"/>
+          <path d="M 81.641 68.124 h -6.514 c -0.553 0 -1 -0.447 -1 -1 V 55.303 c 0 -2.348 1.909 -4.257 4.257 -4.257 s 4.257 1.909 4.257 4.257 v 11.821 C 82.641 67.677 82.193 68.124 81.641 68.124 z M 76.127 66.124 h 4.514 V 55.303 c 0 -1.244 -1.013 -2.257 -2.257 -2.257 s -2.257 1.013 -2.257 2.257 V 66.124 z"/>
+          <path d="M 65.824 47.323 c -0.421 0 -0.812 -0.267 -0.95 -0.688 c -0.172 -0.525 0.113 -1.09 0.638 -1.263 l 22.183 -7.289 C 87.96 37.998 88 37.783 88 37.664 s -0.04 -0.334 -0.305 -0.421 L 48.925 24.504 c -2.567 -0.844 -5.283 -0.844 -7.85 0 L 2.305 37.243 C 2.04 37.33 2 37.544 2 37.664 s 0.04 0.334 0.305 0.421 l 22.183 7.289 c 0.525 0.172 0.811 0.737 0.638 1.263 c -0.172 0.524 -0.737 0.81 -1.262 0.638 L 1.681 39.985 C 0.66 39.649 0 38.738 0 37.664 s 0.66 -1.986 1.681 -2.321 l 38.77 -12.739 c 2.976 -0.977 6.123 -0.977 9.099 0 l 38.77 12.739 C 89.34 35.678 90 36.589 90 37.664 s -0.66 1.986 -1.682 2.321 l -22.182 7.289 C 66.033 47.308 65.928 47.323 65.824 47.323 z"/>
+        </g>
+      </svg>
+    </div>
+  `;
+      }
+
+      const colors = [
+        {
+          color: "red",
+          gradientFrom: "rose-100",
+          gradientTo: "red-100",
+          darkFrom: "rose-900/40",
+          darkTo: "rose-800/50",
+          borderColor: "white/80",
+          darkBorder: "rose-900/60",
+          textColor: "text-rose-500",
+          darkText: "dark:text-rose-300/90",
+        },
+        {
+          color: "green",
+          gradientFrom: "emerald-100",
+          gradientTo: "green-100",
+          darkFrom: "emerald-900/40",
+          darkTo: "green-800/50",
+          borderColor: "white/80",
+          darkBorder: "emerald-900/60",
+          textColor: "text-emerald-500",
+          darkText: "dark:text-emerald-300/90",
+        },
+        {
+          color: "cyan",
+          gradientFrom: "cyan-100",
+          gradientTo: "teal-100",
+          darkFrom: "cyan-900/40",
+          darkTo: "teal-800/50",
+          borderColor: "white/80",
+          darkBorder: "cyan-900/60",
+          textColor: "text-cyan-500",
+          darkText: "dark:text-cyan-300/90",
+        },
+        {
+          color: "indigo",
+          gradientFrom: "indigo-100",
+          gradientTo: "violet-100",
+          darkFrom: "indigo-900/40",
+          darkTo: "violet-800/50",
+          borderColor: "white/80",
+          darkBorder: "indigo-900/60",
+          textColor: "text-indigo-500",
+          darkText: "dark:text-indigo-300/90",
+        },
+        {
+          color: "fuchsia",
+          gradientFrom: "fuchsia-100",
+          gradientTo: "pink-100",
+          darkFrom: "fuchsia-900/40",
+          darkTo: "pink-800/50",
+          borderColor: "white/80",
+          darkBorder: "fuchsia-900/60",
+          textColor: "text-fuchsia-500",
+          darkText: "dark:text-fuchsia-300/90",
+        },
+        {
+          color: "orange",
+          gradientFrom: "orange-100",
+          gradientTo: "amber-100",
+          darkFrom: "orange-900/40",
+          darkTo: "amber-800/50",
+          borderColor: "white/80",
+          darkBorder: "orange-900/60",
+          textColor: "text-orange-500",
+          darkText: "dark:text-orange-300/90",
+        },
+        {
+          color: "violet",
+          gradientFrom: "violet-100",
+          gradientTo: "purple-100",
+          darkFrom: "violet-900/40",
+          darkTo: "purple-800/50",
+          borderColor: "white/80",
+          darkBorder: "violet-900/60",
+          textColor: "text-violet-500",
+          darkText: "dark:text-violet-300/90",
+        },
+        {
+          color: "pink",
+          gradientFrom: "pink-100",
+          gradientTo: "fuchsia-100",
+          darkFrom: "pink-900/40",
+          darkTo: "fuchsia-800/50",
+          borderColor: "white/80",
+          darkBorder: "pink-900/60",
+          textColor: "text-pink-500",
+          darkText: "dark:text-pink-300/90",
+        },
+      ];
+
+      const container = document.getElementById("icon-container");
+      colors.forEach((cfg) => {
+        container.innerHTML += generateColorIcon(cfg);
+      });
+    </script>
+  </body>
+</html>

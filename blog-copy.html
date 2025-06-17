@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- TODO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <!-- Logo and Name-->
+        <a href="#" class="flex items-center">
+          <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-6 mr-3 sm:h-9" alt="John Doe" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">John Doe</span>
+        </a>
+
+        <!-- Social -->
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block"><span></span></div>
+          <div class="flex space-x-4">
+            <a href="https://github.com" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="mailto:your@email.com" class="text-gray-600 hover:text-blue-600 transition">
+              <i class="fas fa-envelope text-2xl"></i>
+            </a>
+          </div>
+
+          <!-- Hamburger Button -->
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div id="mobile-menu-2" class="hidden items-center justify-between w-full lg:flex lg:w-auto lg:order-1">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                aria-current="page"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header with metadata -->
+
+<!-- Header with metadata -->
+<header class="mb-8 fade-in">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <!-- Left side - Author info -->
+        <div class="flex items-center space-x-4">
+            <!-- Author avatar -->
+            <div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                     alt="Author" 
+                     class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Author name and metadata -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-6">
+                <span class="font-medium">Sarah Johnson</span>
+                <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+                    <span class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        5 min read
+                    </span>
+                    <span class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        June 12, 2023
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side - Link icons -->
+        <!-- <div class="flex space-x-4">
+            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition" aria-label="PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M5.523 10.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.035 21.035 0 0 0 .5-1.05.193.193 0 0 0 .027-.02l.003-.002.007-.003.003-.001a.23.23 0 0 1 .063-.023.154.154 0 0 1 .073.017c.096.056.17.176.196.358.023.164.01.328-.027.518l-.003.01a.5.5 0 0 1-.033.139c-.027.08-.056.16-.084.24z"/>
+                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h8v2H3zm0 1h8v2H4a1 1 0 0 1-1-1v-1z"/>
+                </svg>
+            </a>
+        </div> -->
+    </div>
+
+    <!-- Title and subtitle -->
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Exploring the Alpine Wonders</h1>
+    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium">A journey through the Swiss Alps and what we discovered</h2>
+
+    <!-- Improved tags section with hover effects -->
+    <div class="flex flex-wrap gap-2 mb-8 fade-in">
+        <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-xs rounded-full transition-colors cursor-pointer">#hiking</span>
+        <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-xs rounded-full transition-colors cursor-pointer">#alps</span>
+        <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-xs rounded-full transition-colors cursor-pointer">#adventure</span>
+        <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-xs rounded-full transition-colors cursor-pointer">#travel</span>
+        <span class="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-xs rounded-full transition-colors cursor-pointer">#photography</span>
+    </div>
+</header>
+        <!-- Image Carousel -->
+        <div class="mb-12 rounded-xl overflow-hidden shadow-lg fade-in">
+            <div class="relative group">
+                <!-- Carousel container -->
+                <div class="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Mountain view" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white">The Majestic Peaks</h3>
+                            <p class="text-gray-200 mt-1">View from our first campsite at 2,300m elevation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 opacity-0 -translate-x-4">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Mountain lake" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white">Alpine Lakes</h3>
+                            <p class="text-gray-200 mt-1">Crystal clear waters reflecting the surrounding peaks.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 opacity-0 translate-x-4">
+                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Mountain village" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <h3 class="text-xl font-bold text-white">Charming Villages</h3>
+                            <p class="text-gray-200 mt-1">Traditional architecture in the heart of the Alps.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                    &larr;
+                </button>
+                <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                    &rarr;
+                </button>
+                
+                <!-- Indicators -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/80 hover:bg-white transition-all"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all"></button>
+                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog content -->
+        <article class="prose dark:prose-invert prose-lg max-w-none mb-12 fade-in">
+            <p>The Swiss Alps offer some of the most breathtaking landscapes in Europe, with towering peaks that seem to touch the sky and valleys that tell stories of ancient glaciers. Our journey began in the picturesque town of Interlaken, where the air was crisp with the promise of adventure.</p>
+            
+            <p>As we ascended through alpine meadows, the diversity of flora was astonishing—delicate edelweiss flowers clinging to rocky outcrops, vibrant alpine asters dotting the landscape, and the occasional chamois bounding across distant slopes. The higher we climbed, the more the world below seemed to shrink into insignificance.</p>
+        </article>
+
+        <!-- Full width image with caption -->
+        <div class="mb-12 fade-in">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="Mountain trail" 
+                 class="w-full h-auto rounded-lg shadow-lg">
+            <p class="text-center mt-2 text-sm text-gray-500 dark:text-gray-400">The challenging but rewarding trail to the summit</p>
+        </div>
+
+        <!-- More blog content -->
+        <article class="prose dark:prose-invert prose-lg max-w-none mb-12 fade-in">
+            <p>The trails varied from well-maintained paths to rugged scrambles over ancient moraines. Each turn revealed new vistas—sometimes a hidden waterfall cascading down granite cliffs, other times an unexpected herd of ibex grazing on seemingly vertical slopes.</p>
+            
+            <p>At night, we stayed in traditional mountain huts where the warmth of the communal dining room contrasted with the starry cold outside. The Swiss Alpine Club maintains these refuges with remarkable care, offering hot meals and basic comforts at elevations where such luxuries feel miraculous.</p>
+        </article>
+
+        <!-- Left-aligned image with text -->
+        <div class="flex flex-col md:flex-row gap-6 mb-12 fade-in">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                     alt="Mountain flowers" 
+                     class="w-full h-auto rounded-lg shadow-lg">
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Alpine flowers blooming in the summer meadows</p>
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-2xl font-bold mb-4">Alpine Flora</h2>
+                <p class="mb-4">The diversity of plant life in the Alps is astonishing, with over 4,500 species of flowering plants. Many of these are specially adapted to the harsh mountain environment.</p>
+                <p>The short growing season means plants must grow, flower, and set seed quickly. Look for edelweiss, alpine aster, and mountain avens during summer hikes.</p>
+            </div>
+        </div>
+
+        <!-- More blog content -->
+        <article class="prose dark:prose-invert prose-lg max-w-none mb-12 fade-in">
+            <p>One particularly memorable morning, we woke before dawn to climb a nearby peak for sunrise. The ascent in darkness was challenging, but the reward was incomparable—watching the first rays of light paint the snow-capped peaks in hues of pink and gold while the valleys still slept in shadow.</p>
+            
+            <p>Descending through the Engadin Valley on our final days, we encountered charming villages where time seemed to have stood still. The traditional stone houses with their characteristic sgraffito decorations told of a rich cultural heritage intertwined with the mountain landscape.</p>
+        </article>
+
+        <!-- Right-aligned image with text -->
+        <div class="flex flex-col md:flex-row gap-6 mb-12 fade-in">
+            <div class="md:w-1/2 md:order-2">
+                <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                     alt="Mountain hut" 
+                     class="w-full h-auto rounded-lg shadow-lg">
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Traditional alpine hut offering shelter to hikers</p>
+            </div>
+            <div class="md:w-1/2 md:order-1">
+                <h2 class="text-2xl font-bold mb-4">Mountain Refuges</h2>
+                <p class="mb-4">The Swiss Alpine Club maintains an extensive network of mountain huts throughout the Alps, providing basic accommodation for hikers and climbers.</p>
+                <p>These refuges are typically located in spectacular settings, often above 2,500 meters. They offer a unique opportunity to experience the mountains in comfort.</p>
+            </div>
+        </div>
+
+        <!-- More blog content -->
+        <article class="prose dark:prose-invert prose-lg max-w-none mb-12 fade-in">
+            <p>As our journey came to an end, we found ourselves already planning our next alpine adventure. The mountains have a way of calling you back—whether it's the challenge of a new route, the tranquility of high-altitude lakes, or simply the crisp mountain air that feels like nothing else on earth.</p>
+            
+            <p>The Swiss Alps remind us of nature's grandeur and our small place within it. They teach patience through changing weather, reward effort with breathtaking views, and offer solitude amidst some of Europe's most dramatic landscapes.</p>
+        </article>
+
+        <!-- Small centered image -->
+        <div class="flex flex-col items-center mb-12 fade-in">
+            <div class="w-full md:w-2/3">
+                <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                     alt="Alpine village" 
+                     class="w-full h-auto rounded-lg shadow-lg">
+                <p class="text-center mt-2 text-sm text-gray-500 dark:text-gray-400">Traditional Swiss village in the Engadin Valley</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced carousel functionality with animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            let currentIndex = 0;
+            let autoSlideInterval;
+            
+            function showSlide(index, direction = 'next') {
+                // Disable transitions during initial setup
+                slides.forEach(slide => {
+                    slide.style.transition = 'none';
+                });
+                
+                // Update current and next slides based on direction
+                const nextIndex = index;
+                const currentSlide = slides[currentIndex];
+                const nextSlide = slides[nextIndex];
+                
+                // Prepare incoming slide position
+                if (direction === 'next') {
+                    nextSlide.style.transform = 'translateX(30px)';
+                } else {
+                    nextSlide.style.transform = 'translateX(-30px)';
+                }
+                
+                // Re-enable transitions
+                slides.forEach(slide => {
+                    slide.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                });
+                
+                // Animate slides
+                currentSlide.style.opacity = '0';
+                currentSlide.style.transform = direction === 'next' ? 'translateX(-30px)' : 'translateX(30px)';
+                
+                nextSlide.style.opacity = '1';
+                nextSlide.style.transform = 'translateX(0)';
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('bg-white/30', i !== nextIndex);
+                    indicator.classList.toggle('bg-white/80', i === nextIndex);
+                });
+                
+                currentIndex = nextIndex;
+                
+                // Reset autoslide timer
+                resetAutoSlide();
+            }
+            
+            function nextSlide() {
+                const nextIndex = (currentIndex + 1) % slides.length;
+                showSlide(nextIndex, 'next');
+            }
+            
+            function prevSlide() {
+                const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(prevIndex, 'prev');
+            }
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 6000);
+            }
+            
+            // Set up event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    const direction = index > currentIndex ? 'next' : 'prev';
+                    showSlide(index, direction);
+                });
+            });
+            
+            // Auto-advance every 6 seconds
+            resetAutoSlide();
+            
+            // Pause on hover
+            const carousel = document.querySelector('.relative.group');
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            carousel.addEventListener('mouseleave', resetAutoSlide);
+            
+            // Initial display
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>

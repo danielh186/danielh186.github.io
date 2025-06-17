@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- TODO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <!-- <body class="bg-gradient-to-r from-indigo-800 to-blue-900 min-h-screen p-4"> -->
+  <!-- <body class="bg-gray-50"> -->
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div id="icon-container"></div>
+
+    <script>
+      function generateColorIcon(
+        checkboxID,
+        defaultState,
+        colors = ({
+          color = "pink",
+          uncheckedBackground = "gray-200",
+          darkUncheckedBackground = "gray-700",
+          focusRing = "rose-300",
+          darkFocusRing = "rose-800",
+          checkedBackground = "rose-600",
+          darkCheckedBackground = "rose-600",
+        } = {})
+      ) {
+        return `
+        <label class="inline-flex items-center me-5 cursor-pointer">
+            <input type="checkbox" id="${checkboxID}" checked="${defaultState}" value="" class="sr-only peer" checked />
+            <div
+              class="relative w-11 h-6 bg-${colors.uncheckedBackground} dark:bg-${colors.darkUncheckedBackground} rounded-full peer peer-focus:ring-4 peer-focus:ring-${colors.focusRing} dark:peer-focus:ring-${colors.darkFocusRing} \
+              peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] \
+              after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-${colors.checkedBackground} dark:peer-checked:bg-${colors.darkCheckedBackground}"
+            ></div>
+            <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Education</span>
+        </label>
+        `;
+      }
+
+      const colors = [
+        {
+          color: "rose",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "rose-300",
+          darkFocusRing: "rose-800",
+          checkedBackground: "rose-600",
+          darkCheckedBackground: "rose-600",
+        },
+        {
+          color: "green",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "emerald-300",
+          darkFocusRing: "emerald-800",
+          checkedBackground: "emerald-600",
+          darkCheckedBackground: "emerald-600",
+        },
+        {
+          color: "cyan",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "cyan-300",
+          darkFocusRing: "cyan-800",
+          checkedBackground: "cyan-600",
+          darkCheckedBackground: "cyan-600",
+        },
+        {
+          color: "indigo",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "indigo-300",
+          darkFocusRing: "indigo-800",
+          checkedBackground: "indigo-600",
+          darkCheckedBackground: "indigo-600",
+        },
+        {
+          color: "fuchsia",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "fuchsia-300",
+          darkFocusRing: "fuchsia-800",
+          checkedBackground: "fuchsia-600",
+          darkCheckedBackground: "fuchsia-600",
+        },
+
+        {
+          color: "orange",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "orange-300",
+          darkFocusRing: "orange-800",
+          checkedBackground: "orange-500", // Note this one is 500 instead of 600
+          darkCheckedBackground: "orange-500",
+        },
+        {
+          color: "violet",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "violet-300",
+          darkFocusRing: "violet-800",
+          checkedBackground: "violet-600",
+          darkCheckedBackground: "violet-600",
+        },
+        {
+          color: "pink",
+          uncheckedBackground: "gray-200",
+          darkUncheckedBackground: "gray-700",
+          focusRing: "pink-300",
+          darkFocusRing: "pink-800",
+          checkedBackground: "pink-600",
+          darkCheckedBackground: "pink-600",
+        },
+      ];
+
+      const container = document.getElementById("icon-container");
+      colors.forEach((color) => {
+        container.innerHTML += generateColorIcon("myID", "true", color);
+      });
+    </script>
+  </body>
+</html>
