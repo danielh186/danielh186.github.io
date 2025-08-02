@@ -83,3 +83,7 @@ a:hover {
     color: #a5b4fc; /* indigo-300 */
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

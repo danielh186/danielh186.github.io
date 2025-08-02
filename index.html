@@ -14,25 +14,26 @@
   <!-- <body class="bg-gray-50"> -->
   <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <!-- Header -->
+    <!-- <nav class="sticky top-0 z-50 bg-white border-gray-200 py-2.5 dark:bg-gray-900"> -->
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <!-- Logo and Name-->
-        <a href="#" class="flex items-center">
-          <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-6 mr-3 sm:h-9" alt="John Doe" />
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">John Doe</span>
+        <a href="/index.html" class="flex items-center">
+          <img src="media/profile-picture.jpg" class="h-6 mr-3 sm:h-9 rounded-full" alt="Daniel Hahn" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Daniel Hahn</span>
         </a>
 
         <!-- Social -->
         <div class="flex items-center lg:order-2">
           <div class="hidden mt-2 mr-4 sm:inline-block"><span></span></div>
           <div class="flex space-x-4">
-            <a href="https://github.com" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+            <a href="https://www.github.com/danielh186" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
               <i class="fab fa-github text-2xl"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+            <a href="https://www.linkedin.com/in/daniel-hahn-618692337/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
               <i class="fab fa-linkedin text-2xl"></i>
             </a>
-            <a href="mailto:your@email.com" class="text-gray-600 hover:text-blue-600 transition">
+            <a href="mailto:daniel.hahn@hs-rm.de" class="text-gray-600 hover:text-blue-600 transition">
               <i class="fas fa-envelope text-2xl"></i>
             </a>
           </div>
@@ -68,7 +69,7 @@
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
               <a
-                href="#"
+                href="#about-me"
                 class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                 aria-current="page"
                 >About</a
@@ -76,7 +77,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="#career-header"
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >Experience</a
               >
@@ -93,7 +94,7 @@
       </div>
     </nav>
     <!-- About Me -->
-    <section class="flex justify-center items-center min-h-[calc(100vh)] px-4 py-12">
+    <section id="about-me" class="flex justify-center items-center min-h-[calc(100vh)] px-4 py-12">
       <div
         class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-7xl w-full p-8 transition-all duration-300 min-h-30 animate-fade-in"
       >
@@ -101,47 +102,72 @@
         <div class="flex flex-col md:flex-row">
           <div class="md:w-1/3 text-center mb-8 md:mb-0">
             <img
-              src="https://i.pravatar.cc/300"
+              src="media/profile-picture.jpg"
               alt="Profile Picture"
               class="rounded-full w-48 h-48 mx-auto mb-4 border-4 border-indigo-800 dark:border-blue-900 transition-transform duration-300 hover:scale-105"
             />
-            <h1 class="text-2xl font-bold text-indigo-800 dark:text-white mb-2">John Doe</h1>
-            <p class="text-gray-600 dark:text-gray-300">Software Developer</p>
+            <h1 class="text-2xl font-bold text-indigo-800 dark:text-white mb-2">Daniel Hahn</h1>
+            <p class="text-gray-600 dark:text-gray-300">Researcher at Hochschule RheinMain</p>
+            <p class=" mt-2 text-gray-600 dark:text-gray-300 flex items-center justify-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-indigo-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0 10s8-4.5 8-10a8 8 0 10-16 0c0 5.5 8 10 8 10z" />
+              </svg>
+              Wiesbaden, Germany
+            </p>
           </div>
           <div class="md:w-2/3 md:pl-8">
             <h2 class="text-xl font-semibold text-indigo-800 dark:text-white mb-4">About Me</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-6">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-              aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-              gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-              takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate
-              velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-              iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-              facilisi. Lorem ipsum dolor sit amet, consectetuer
+            <p class="text-gray-700 dark:text-gray-300">
+              My passion for computers and electronics began early, back in my school years. I always knew I'd pursue
+              a career in either computer science or electrical engineering.
             </p>
-            <h2 class="text-xl font-semibold text-indigo-800 dark:text-white mb-4">Skills</h2>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">
+              Working at PHYTEC during the 3.5 years of my bachelor in Technical Computer Science, I gained hands-on
+              experience in embedded linux development and computer vision.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">
+              Towards the end of my bachelor's degree, I shifted my focus to embedded hardware
+              security, diving into side-channel analysis and fault injection.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mt-1">
+              My personal projects tend to be ambitious undertakings—often clearly beyond my current
+              technical knowledge. But that's exactly why I take them on: deliberately pushing my boundaries,
+              stubbornly working through challenges, and growing my skillset along the line. Even if it means
+              failing and iterating many times until everything finally clicks into place.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mt-5">
+              Currently, I'm expanding my expertise by pursuing a master's degree while working as a Scientific Researcher, tackling cutting-edge challenges at the intersection of hardware and software security
+            </p>
+
+            <h2 class="text-xl font-semibold text-indigo-800 dark:text-white mt-6 mb-4">Skills</h2>
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">React</span>
-              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">CAD (Solid Edge, Inventor)</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">3D-Printing</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">ECAD (KICAD)</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Embedded Programming</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Embedded Linux</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Yocto</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Embedded Security</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Hardware Design</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">FPGAs</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Computer Vision</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">C</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">C++</span>
               <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Python</span>
-              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">SQL</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">VHDL</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Verilog</span>
+              <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Full-Stack Web Dev</span>
             </div>
             <!-- Action Buttons -->
             <div class="flex flex-wrap gap-4">
               <a
-                href="#"
+                href="#career-header"
                 class="inline-block px-6 py-2 text-white bg-indigo-700 rounded-full shadow hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 transition"
               >
                 Experience
               </a>
               <a
-                href="#"
+                href="#career-header"
                 class="inline-block px-6 py-2 text-indigo-700 border border-indigo-700 rounded-full hover:bg-indigo-50 dark:text-indigo-300 dark:border-indigo-300 dark:hover:bg-indigo-900 transition"
               >
                 Contact
@@ -152,9 +178,13 @@
       </div>
     </section>
 
+  <div id="career-header" class="text-center pt-12 pb-4">
+    <h2 class="text-3xl font-bold text-indigo-800 dark:text-white">Experience</h2>
+  </div>
     <!-- Filter Toggles -->
-    <div id="timeline-toggle-container" class="flex flex-wrap gap-6 justify-center mb-12"></div>
-  
+
+    <div id="timeline-toggle-container" class="pt-8 flex flex-wrap gap-6 justify-center mb-12"></div>
+
     <!-- Experience Timeline -->
     <div class="max-w-[90rem] mx-auto px-4">
       <div
@@ -168,21 +198,21 @@
 
     <!-- Footer -->
     <footer class="flex flex-col space-y-10 justify-center m-10">
-      <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+      <!-- <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Home</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">About</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Services</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Media</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Gallery</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Contact</a>
-      </nav>
+      </nav> -->
 
-      <div class="flex justify-center space-x-5">
+      <!-- <div class="flex justify-center space-x-5">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/4A90E2/facebook-new.png" alt="Facebook" />
         </a>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.icons8.com/fluent/30/4A90E2/linkedin-2.png" alt="LinkedIn" />
+          <img src="https://www.linkedin.com/in/daniel-hahn-618692337/" alt="LinkedIn" />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/4A90E2/instagram-new.png" alt="Instagram" />
@@ -193,12 +223,76 @@
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/4A90E2/twitter.png" alt="Twitter" />
         </a>
-      </div>
+      </div> -->
       <p class="text-center font-medium text-gray-600 dark:text-gray-400">
-        &copy; 2022 Company Ltd. All rights reserved.
+        &copy; 2025 Daniel Hahn - All rights reserved.
       </p>
     </footer>
 
+
+    <!-- Carousel Modal -->
+    <div id="carousel-modal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div class="modal-content relative w-full max-w-4xl max-h-[90vh] rounded-xl overflow-hidden shadow-2xl">
+        <!-- Close button -->
+        <button
+          id="close-carousel-btn"
+          class="absolute top-4 right-4 z-50 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all"
+        >
+          &times;
+        </button>
+
+        <!-- Carousel container -->
+        <div id="carousel-container" class="relative group">
+          <div id="carousel-slides-container" class="relative h-64 sm:h-80 md:h-[70vh] w-full overflow-hidden">
+            <!-- Slides will be dynamically inserted here -->
+          </div>
+
+          <!-- Navigation arrows -->
+          <button
+            class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+          >
+            &larr;
+          </button>
+          <button
+            class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+          >
+            &rarr;
+          </button>
+
+          <!-- Indicators container -->
+          <div id="carousel-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+            <!-- Indicators will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+     <style>
+      .modal {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.5); /* Less dark background */
+      }
+      .modal-content {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .modal:not(.open) {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .modal:not(.open) .modal-content {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      .modal.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal.open .modal-content {
+        transform: scale(1);
+        opacity: 1;
+      }
+    </style>
     <script type="module" src="scripts/script.js"></script>
+    <script type="module" src="scripts/carousel.js"></script>
   </body>
 </html>

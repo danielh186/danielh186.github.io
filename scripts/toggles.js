@@ -25,6 +25,27 @@ export function generateToggle(
     `;
 }
 
+function initializeToggleListeners() {
+    Object.keys(toggleColors).forEach(category => {
+        const checkbox = document.getElementById(`${category}-toggle`);
+        console.log(checkbox)
+        if (checkbox) {
+            checkbox.addEventListener('change', () => {
+                const timelineEntries = document.querySelectorAll(`.timelineEntry-${category}`);
+                const show = checkbox.checked;
+                console.log(timelineEntries)
+                timelineEntries.forEach(entry => {
+                    entry.classList.toggle('hidden', !show);
+                });
+            });
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    initializeToggleListeners();          // set up toggle behavior
+});
+
 export const toggleColors = {
     education: {
         color: "rose",
@@ -62,7 +83,7 @@ export const toggleColors = {
         checkedBackground: "indigo-600",
         darkCheckedBackground: "indigo-600",
     },
-    archievements: {
+    achievements: {
         color: "fuchsia",
         uncheckedBackground: "gray-200",
         darkUncheckedBackground: "gray-700",

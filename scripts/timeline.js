@@ -19,48 +19,73 @@ export function generateTimelineYearMarker(year) {
     <div></div>
   `
 }
+// Diagonal Image Timeline Card with proper carousel images handling
+export function diagonalImageCard(side, category, title, subtitle, date, abstract, tags, img_src, img_alt, link, carousel_images) {
+  // Determine if this card should be clickable (has either link or carousel)
+  const hasCarousel = carousel_images && carousel_images.length > 0;
+  const hasLink = link && !hasCarousel; // Only use link if no carousel provided
+  const isClickable = hasCarousel || hasLink;
+  
+  // Prepare the carousel images string for the onclick handler
+  let carouselImagesString = '';
+  if (hasCarousel) {
+    // Create a properly formatted JavaScript array string
+    carouselImagesString = carousel_images.map(img => 
+      `{image_src:'${img.image_src}',image_alt:'${img.image_alt}',title:'${img.title}',description:'${img.description}'}`
+    ).join(',');
+  }
 
-// Diagonal Image Timeline Card
-export function diagonalImageCard(side, category, title, subtitle, date, abstract, tags, img_src, img_alt, link) {
-  // alternate by "md:odd:flex-row-reverse"
-  // <div class="relative flex items-center justify-between md:odd:flex-row-reverse" data-clickable=${link ? "true" : "false"}>
+  console.log("hasCarousel:", hasCarousel)
+  console.log("hasLink:", hasLink)
+
+  // Determine the click action
+  let clickAction = '';
+  if (hasCarousel) {
+    clickAction = `onclick="window.set_carousel_images([${carouselImagesString}]); document.getElementById('carousel-modal').classList.add('open'); document.body.style.overflow = 'hidden';"`;
+  } else if (hasLink) {
+    clickAction = `onclick="window.location.href='${link}'"`;
+  }
+
   return `
-    <div class="relative flex items-center justify-between ${(side == "left") ? "md:flex-row-reverse" : ""}" data-clickable=${link ? "true" : "false"}>
-      <!--Object only exists for large screens and grows so that icon is pushed to the center  -->
+    <div class="timelineEntry-${category} relative flex items-center justify-between ${(side == "left") ? "md:flex-row-reverse" : ""}" data-clickable="${isClickable ? "true" : "false"}">
+      <!-- Spacer for large screens -->
       <div class="hidden md:block md:flex-1 mx-4"></div>
 
       <!-- Icon -->
-      <!-- width of icon has to be 2x timeline:margin-left + timeline-width -->
       <div
         class="w-[calc((11.5)*0.25rem)] h-[calc((11.5)*0.25rem)] md:w-20 md:h-20 flex items-center justify-center bg-gray-50 dark:bg-gray-900"
       >
-      ${generateTimelineIcon(category)}
+        ${generateTimelineIcon(category)}
       </div>
-      <div class="card-wrapper flex-1 ml-4 md:mx-4" data-clickable=${link ? "true" : "false"} ${link ? `onclick="window.location.href='${link}'" style="cursor: pointer"` : ''}>
+      
+      <div class="card-wrapper flex-1 ml-4 md:mx-4" 
+           data-clickable="${isClickable ? "true" : "false"}" 
+           ${isClickable ? `${clickAction} style="cursor: pointer"` : ''}>
         <div
-          class="card-content flex bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow dark:shadow-lg dark:shadow-slate-900/50 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+          class="card-content flex bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow dark:shadow-lg dark:shadow-slate-900/50 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${isClickable ? 'hover:cursor-pointer' : ''}"
         >
-        <!-- Diagonal image container -->
-        <div class="w-1/4 relative overflow-hidden diagonal-cut flex items-center justify-center">
-          <img
-            src="${img_src}"
-            alt="${img_alt}"
-            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-          />
-        </div>
+          <!-- Diagonal image container -->
+          <div class="w-1/4 relative overflow-hidden diagonal-cut flex items-center justify-center">
+            <img
+              src="${img_src}"
+              alt="${img_alt}"
+              class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          
           <!-- Content area -->
           <div class="flex-1 p-4 flex flex-col">
             <div class="flex justify-between">
               <div>
                 <h3 class="font-bold text-lg text-slate-900 dark:text-slate-200">${title}</h3>
-                <p class="text-sm text-slate-500 dark:text-slate-400  [&_a]:text-indigo-500 [&_a]:dark:text-indigo-400 [&_a]:underline [&_a]:hover:text-indigo-700 [&_a]:dark:hover:text-indigo-300">${subtitle}</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 [&_a]:text-indigo-500 [&_a]:dark:text-indigo-400 [&_a]:underline [&_a]:hover:text-indigo-700 [&_a]:dark:hover:text-indigo-300">${subtitle}</p>
               </div>
               <time class="text-sm font-medium text-indigo-500 dark:text-indigo-400">${date}</time>
             </div>
 
             <!-- Description -->
-              <p class="mt-2 text-slate-500 dark:text-slate-400 text-sm flex-grow [&_a]:text-indigo-500 [&_a]:dark:text-indigo-400 [&_a]:underline [&_a]:hover:text-indigo-700 [&_a]:dark:hover:text-indigo-300">
-            ${abstract}
+            <p class="mt-2 text-slate-500 dark:text-slate-400 text-sm flex-grow [&_a]:text-indigo-500 [&_a]:dark:text-indigo-400 [&_a]:underline [&_a]:hover:text-indigo-700 [&_a]:dark:hover:text-indigo-300">
+              ${abstract}
             </p>
 
             <!-- Tags -->
@@ -72,11 +97,24 @@ export function diagonalImageCard(side, category, title, subtitle, date, abstrac
               : ""
             }
             ${tags ? '</div>' : ""}
+            
+            <!-- Action indicator (shows either carousel or link indicator) -->
+            <div class="mt-2 flex justify-end">
+              ${hasCarousel ? `
+                <span class="text-xs text-slate-400 dark:text-slate-500 flex items-center">
+                  <i class="fas fa-images mr-1"></i> ${carousel_images.length} photos
+                </span>
+              ` : hasLink ? `
+                <span class="text-xs text-indigo-500 dark:text-indigo-400 flex items-center">
+                  <i class="fas fa-external-link-alt mr-1"></i> View more
+                </span>
+              ` : ''}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  `
+  `;
 }
 
 export function generateTimelineIcon(icon) {
@@ -135,7 +173,7 @@ export const timelineIconColors = {
     textColor: "text-indigo-500",
     darkText: "dark:text-indigo-300/90",
   },
-  archievements: {
+  achievements: {
     color: "fuchsia",
     gradientFrom: "fuchsia-100",
     gradientTo: "pink-100",
@@ -245,7 +283,7 @@ export function generateSvg(icon, textColor, darkText) {
       </svg>
     `
   }
-  else if (icon == "archievements") {
+  else if (icon == "achievements") {
     return `
       <svg
         class="w-4/5 h-4/5 md:w-4/5 md:h-4/5 ${textColor} ${darkText}"

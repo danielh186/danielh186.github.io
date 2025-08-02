@@ -14,9 +14,9 @@
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <!-- Logo and Name-->
-        <a href="#" class="flex items-center">
-          <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-6 mr-3 sm:h-9" alt="John Doe" />
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">John Doe</span>
+        <a href="/index.html" class="flex items-center">
+          <img src="media/profile-picture.jpg" class="h-6 mr-3 sm:h-9 rounded-full" alt="Daniel Hahn" />
+          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Daniel Hahn</span>
         </a>
 
         <!-- Social -->
@@ -29,7 +29,7 @@
             <a href="https://linkedin.com" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
               <i class="fab fa-linkedin text-2xl"></i>
             </a>
-            <a href="mailto:your@email.com" class="text-gray-600 hover:text-blue-600 transition">
+            <a href="mailto:daniel.hahn@hs-rm.de" class="text-gray-600 hover:text-blue-600 transition">
               <i class="fas fa-envelope text-2xl"></i>
             </a>
           </div>
@@ -65,7 +65,7 @@
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
               <a
-                href="#"
+                href="/index.html#about-me"
                 class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                 aria-current="page"
                 >About</a
@@ -73,7 +73,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="/index.html#career-header"
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >Experience</a
               >
@@ -84,7 +84,6 @@
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >Contact</a
               >
-            </li>
           </ul>
         </div>
       </div>
@@ -256,14 +255,26 @@
           <!-- Carousel container -->
           <div class="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
             <!-- Slide 1 -->
-            <div
-              class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Mountain view"
-                class="w-full h-full object-cover"
-              />
+            <div class="carousel-slide absolute inset-0 w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800 overflow-hidden">
+              <!-- Background blurred image -->
+              <div class="absolute inset-0 overflow-hidden">
+                <img
+                  src="media/printed-cnc/cnc-3dp.jpg"
+                  alt=""
+                  class="w-full h-full object-cover filter blur-lg scale-105"
+                />
+              </div>
+              
+              <!-- Main image container -->
+              <div class="relative h-full w-full flex items-center justify-center">
+                <img
+                  src="media/printed-cnc/cnc-3dp.jpg"
+                  alt="Mountain view"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              
+              <!-- Caption (keep your existing) -->
               <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                 <h3 class="text-xl font-bold text-white">The Majestic Peaks</h3>
                 <p class="text-gray-200 mt-1">View from our first campsite at 2,300m elevation.</p>
@@ -462,16 +473,16 @@
 
     <!-- Footer -->
     <footer class="flex flex-col space-y-10 justify-center m-10">
-      <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+      <!-- <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Home</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">About</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Services</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Media</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Gallery</a>
         <a class="hover:text-indigo-700 dark:hover:text-indigo-300 transition" href="#">Contact</a>
-      </nav>
+      </nav> -->
 
-      <div class="flex justify-center space-x-5">
+      <!-- <div class="flex justify-center space-x-5">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/4A90E2/facebook-new.png" alt="Facebook" />
         </a>
@@ -487,9 +498,9 @@
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <img src="https://img.icons8.com/fluent/30/4A90E2/twitter.png" alt="Twitter" />
         </a>
-      </div>
+      </div> -->
       <p class="text-center font-medium text-gray-600 dark:text-gray-400">
-        &copy; 2022 Company Ltd. All rights reserved.
+        &copy; 2025 Daniel Hahn - All rights reserved.
       </p>
     </footer>
 
