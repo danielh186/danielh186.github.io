@@ -25,7 +25,7 @@ export function diagonalImageCard(side, category, title, subtitle, date, abstrac
   // alternate by "md:odd:flex-row-reverse"
   // <div class="relative flex items-center justify-between md:odd:flex-row-reverse" data-clickable=${link ? "true" : "false"}>
   return `
-    <div class="relative flex items-center justify-between ${(side == "left") ? "md:flex-row-reverse" : ""}" data-clickable=${link ? "true" : "false"} ${link ? `onclick="window.location.href='${link}'" style="cursor: pointer"` : ''}>
+    <div class="relative flex items-center justify-between ${(side == "left") ? "md:flex-row-reverse" : ""}" data-clickable=${link ? "true" : "false"}>
       <!--Object only exists for large screens and grows so that icon is pushed to the center  -->
       <div class="hidden md:block md:flex-1 mx-4"></div>
 
@@ -36,19 +36,18 @@ export function diagonalImageCard(side, category, title, subtitle, date, abstrac
       >
       ${generateTimelineIcon(category)}
       </div>
-      <div class="card-wrapper flex-1 ml-4 md:mx-4">
+      <div class="card-wrapper flex-1 ml-4 md:mx-4" data-clickable=${link ? "true" : "false"} ${link ? `onclick="window.location.href='${link}'" style="cursor: pointer"` : ''}>
         <div
           class="card-content flex bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow dark:shadow-lg dark:shadow-slate-900/50 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
         >
-          <!-- Diagonal image container -->
-          <div class="w-1/4 relative overflow-hidden diagonal-cut">
-            <img
-              src="${img_src}"
-              alt="${img_alt}"
-              class="absolute inset-0 w-full h-full object-cover object-[80%_center] transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-
+        <!-- Diagonal image container -->
+        <div class="w-1/4 relative overflow-hidden diagonal-cut flex items-center justify-center">
+          <img
+            src="${img_src}"
+            alt="${img_alt}"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+        </div>
           <!-- Content area -->
           <div class="flex-1 p-4 flex flex-col">
             <div class="flex justify-between">
