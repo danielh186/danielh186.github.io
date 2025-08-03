@@ -35,6 +35,19 @@ export const timelineEntries = [
         "",
         null, // no link
     ),
+    diagonalImageCard(
+        "right",
+        "research",
+        "The Weakest Link: Secure Boot on the Somfy Tahoma Switch",
+        "Coming soon",
+        "xx/xx/2025",
+        "",
+        // "22/04/2024&nbsp;-<br>20/08/2025",
+        ["Research Paper", "Hardware Hacking", "Coming Soon"],
+        "media/hacking-tahoma.jpg",
+        "Project",
+        "" // TODO research paper link
+    ),
     // diagonalImageCard(
     //     "right",
     //     "research",
